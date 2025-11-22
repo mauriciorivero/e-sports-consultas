@@ -14,10 +14,10 @@
     --text-primary: rgba(0, 0, 0, 0.87);
     --text-secondary: rgba(0, 0, 0, 0.6);
     --divider-color: rgba(0, 0, 0, 0.12);
-    
-    --shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    --shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    --shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    --shadow-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 * {
@@ -53,10 +53,21 @@ body {
 .sidebar-header {
     padding: 24px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 16px;
     border-bottom: 1px solid var(--divider-color);
     color: var(--primary-color);
+}
+
+.sidebar-header h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebar-header img {
+    width: 180px;
 }
 
 .topic-list {
@@ -156,8 +167,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Cards */
@@ -204,17 +222,29 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 4px 8px;
     font-size: 10px;
     color: #fff;
     border-bottom-left-radius: 4px;
 }
 
-.sql-keyword { color: #c678dd; }
-.sql-string { color: #98c379; }
-.sql-number { color: #d19a66; }
-.sql-comment { color: #5c6370; font-style: italic; }
+.sql-keyword {
+    color: #c678dd;
+}
+
+.sql-string {
+    color: #98c379;
+}
+
+.sql-number {
+    color: #d19a66;
+}
+
+.sql-comment {
+    color: #5c6370;
+    font-style: italic;
+}
 
 /* Tables */
 .data-table-container {
@@ -330,15 +360,15 @@ tr:last-child td {
         height: 100%;
         transform: translateX(-100%);
     }
-    
+
     .sidebar.open {
         transform: translateX(0);
     }
-    
+
     .mobile-only {
         display: block;
     }
-    
+
     .icon-button {
         background: none;
         border: none;
