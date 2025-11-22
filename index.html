@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial SQL - E-Sports</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="material-icons">school</span>
+                <h2>SQL Tutorial</h2>
+            </div>
+            <nav class="topic-list" id="topicList">
+                <!-- Topics will be injected here by JS -->
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-bar">
+                <button id="menuToggle" class="icon-button mobile-only">
+                    <span class="material-icons">menu</span>
+                </button>
+                <h1 id="pageTitle">Introducción</h1>
+                <div class="progress-container">
+                    <span id="slideCounter">1 / 14</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="slide-container" id="slideContainer">
+                <!-- Slide content will be injected here -->
+                <div class="slide active">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Bienvenido al Tutorial de SQL</h2>
+                        </div>
+                        <div class="card-content">
+                            <p>Este tutorial interactivo te guiará a través de las consultas SQL más comunes utilizando la base de datos de <strong>E-Sports</strong>.</p>
+                            <p>Aprenderás a insertar datos, modificar tablas, realizar consultas complejas y generar reportes.</p>
+                            <div class="illustration-placeholder">
+                                <span class="material-icons large-icon">storage</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary" onclick="nextSlide()">Comenzar <span class="material-icons">arrow_forward</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Controls (Floating or Fixed at bottom) -->
+            <div class="navigation-controls">
+                <button class="btn btn-text" id="prevBtn" onclick="prevSlide()" disabled>
+                    <span class="material-icons">arrow_back</span> Anterior
+                </button>
+                <button class="btn btn-contained" id="nextBtn" onclick="nextSlide()">
+                    Siguiente <span class="material-icons">arrow_forward</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
